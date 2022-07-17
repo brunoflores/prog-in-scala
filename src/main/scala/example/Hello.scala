@@ -14,12 +14,10 @@ object Hello {
     greeting.foreach(c => printf("%c / ", c))
     println()
 
-    val numbers = new Array[Int](3)
-    numbers(0) = 1
-    numbers(1) = 2
-    numbers(2) = 3
+    val numbers = Array(1, 2, 3)
     val total = numbers.foldLeft(0)(_ + _)
     println(total)
+    assert(total == 6)
 
     val cash = factorial(30)
     println(cash)
